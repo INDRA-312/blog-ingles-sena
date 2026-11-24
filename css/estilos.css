@@ -1,0 +1,358 @@
+
+/* ========================================
+   CONFIGURACIÓN GENERAL
+======================================== */
+
+body {
+    margin: 0;
+    background-color: #f8f7f4;
+    font-family: Arial, sans-serif;
+    color: #0f2437;
+}
+
+header {
+    background-color: #0f2437;
+    color: white;
+    border: 1px solid #6B7280;
+}
+
+h1 {
+    padding: 2px 10px;
+}
+
+.color_naranja {
+    color: #F97316;
+}
+
+
+/* ========================================
+   IMAGEN PRINCIPAL - EFECTO PARALLAX
+======================================== */
+
+.contenedor-imagen {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 1000px;
+
+    background-image: url("../img/Yo.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.contenedor-imagen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to right,
+        rgba(15, 36, 55, 0.95),
+        rgba(15, 36, 55, 0.4),
+        transparent
+    );
+}
+
+
+/* ========================================
+   FOTO DE PERFIL
+======================================== */
+
+.foto-perfil-1 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #F97316;
+    overflow: hidden;
+    padding: 3px;
+    margin: 10px 20px;
+    flex-shrink: 0;
+}
+
+.foto-perfil-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ========================================
+   CONTENEDOR PRINCIPAL
+======================================== */
+
+.contenedor_principal {
+    background-color: #fff7eb;
+    width: 100%;
+    margin: 0;
+    padding: 25px 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+
+    min-height: 220px;
+}
+
+
+/* ========================================
+   INFORMACIÓN PERSONAL
+======================================== */
+
+.informacion-perfil {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    flex-shrink: 0;
+    gap: 6px;
+}
+
+.informacion-perfil h2,
+.informacion-perfil h3,
+.informacion-perfil p {
+    margin: 0;
+}
+
+.informacion-perfil h2 {
+    font-size: 25px;
+}
+
+.informacion-perfil h3 {
+    font-size: 19px;
+    color: #F97316;
+}
+
+.informacion-perfil p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   INFORMACIÓN ADICIONAL
+======================================== */
+
+.informacion-adicional {
+    border-left: 1px solid #ddd;
+    padding-left: 35px;
+    margin-left: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 300px;
+}
+
+.dato {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icono {
+    font-size: 32px;
+    color: #F97316;
+    width: 40px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.dato h4,
+.dato p {
+    margin: 0;
+}
+
+.dato h4 {
+    font-size: 17px;
+}
+
+.dato p {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   SECCIÓN DEL BLOG
+======================================== */
+
+.seccion-blog {
+    padding: 20px 35px;
+    margin: 2px 20px;
+}
+
+.titulo-blog {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.titulo-blog h2 {
+    margin: 0;
+    font-size: 32px;
+    white-space: nowrap;
+}
+
+.titulo-blog h2 span {
+    color: #F97316;
+}
+
+.linea-naranja {
+    flex: 1;
+    height: 2px;
+    background-color: #F97316;
+}
+
+.descripcion-blog {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+
+/* ========================================
+   TARJETAS DE PUBLICACIONES
+======================================== */
+
+.publicaciones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px 35px;
+}
+
+.tarjeta {
+    position: relative;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease;
+}
+
+.tarjeta img {
+    display: block;
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+}
+
+.tarjeta:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+
+/* ========================================
+   NÚMERO DE PUBLICACIÓN
+======================================== */
+
+.numero {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #F97316;
+    color: white;
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+/* ========================================
+   CONTENIDO DE LAS TARJETAS
+======================================== */
+
+.contenido-tarjeta {
+    padding: 12px 15px;
+}
+
+.contenido-tarjeta h3 {
+    margin: 0 0 12px;
+    font-size: 17px;
+}
+
+.contenido-tarjeta p {
+    font-size: 14px;
+    line-height: 1.4;
+    min-height: 58px;
+    margin: 0 0 12px;
+}
+
+
+/* ========================================
+   BOTONES READ POST
+======================================== */
+
+.contenido-tarjeta a {
+    display: inline-block;
+    background-color: #F97316;
+    color: white;
+    text-decoration: none;
+    padding: 8px 13px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.contenido-tarjeta a:hover {
+    background-color: #EA580C;
+}
+
+
+/* ========================================
+   ADAPTACIÓN PARA TABLETS
+======================================== */
+
+@media (max-width: 900px) {
+
+    .publicaciones {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ========================================
+   ADAPTACIÓN PARA CELULARES
+======================================== */
+
+@media (max-width: 650px) {
+
+    .contenedor_principal {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .informacion-perfil {
+        width: 250px;
+    }
+
+    .informacion-adicional {
+        border-left: none;
+        border-top: 1px solid #ddd;
+        padding: 15px 0 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .contenedor-imagen {
+        background-attachment: scroll;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .publicaciones {
+        grid-template-columns: 1fr;
+    }
+
+}

@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    background-color: #f8f7f4;
+    font-family: Arial, sans-serif;
+    color: #0f2437;
+}
+
+header {
+    background-color: #0f2437;
+    color: white;
+    border: 1px solid #6B7280;
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    background-color: #0f2437;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+
+.navegacion a {
+    text-decoration: none;
+    color: #F97316;
+    margin-left: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    font-size: 15px;
+}
+
+.navegacion a:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+.color_naranja {
+    color: #F97316;
+}
+
+h1 {
+    padding: 2px 10px;
+}
+
+.contenedor-imagen {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 770px;
+
+    background-image: url("../img/familia-2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.contenedor-imagen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to right,
+        rgba(15, 36, 55, 0.95),
+        rgba(15, 36, 55, 0.4),
+        transparent
+    );
+}
+
+.subrayado {
+    text-decoration: underline;
+    color: #F97316;
+}
+
+.alinear {
+    text-align: center;
+}
+
+.dimensiones-imagen {
+    max-width: 100%;
+    width: 700px;
+    height: auto;
+}
+
+.contenido-familia {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.multimedia {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    flex: 0 1 700px;
+    margin: 20px 0;
+}
+
+.multimedia img:not(.dimensiones-imagen) {
+    width: 100%;
+    height: auto;
+}
+
+.introduccion {
+    flex: 1;
+    margin-top: 20px;
+}
+
+.contenedor-principal {
+    width: 90%;
+    max-width: 1500px;
+    margin: 1px auto;
+    padding: 15px;
+    background-color: rgb(250, 243, 235);
+    box-sizing: border-box;
+    border: 1px solid #0f2437;
+}
